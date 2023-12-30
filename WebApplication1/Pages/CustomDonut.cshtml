@@ -1,0 +1,80 @@
+﻿@page
+@model WebApplication1.Pages.CustomDonutModel
+@{
+    ViewData["Title"] = "Customize Your Donute";
+}
+<div class="text-center">
+    <h3>Create Your Own Donut!</h3>
+    <br />
+    <img src="~/images/DonutMakerBanner.png" style="border-radius: 5px; box-shadow: initial; box-shadow: 1px 1px 3px #000000" />
+    <form method="post">
+        <div>
+            <br />
+            <input type="text" asp-for="donut.DonutName" placeholder="Name of your donut" />
+        </div>
+        <div><h2>Start with a Coating</h2></div>
+        <div>
+
+
+            <div>
+                <input type="checkbox" asp-for="donut.Chocolate" />Chocolate
+            </div>
+            <div>
+                <input type="checkbox" asp-for="donut.Vanilla" />Vanilla
+            </div>
+            <div>
+                <input type="checkbox" asp-for="donut.Strawberry" />Strawberry
+            </div>
+            <div>
+                <input type="checkbox" asp-for="donut.Peanut_Butter" />Peanut Butter
+            </div>
+            <div>
+                <input type="checkbox" asp-for="donut.Blueberry" />Blueberry
+            </div>
+
+
+        </div>
+        <div><h2>Pick a Topping</h2></div>
+        <div>
+
+
+            <div>
+                <input type="checkbox" asp-for="donut.Chocolate_Sprinkle" />Chocolate Sprinkle
+            </div>
+            <div>
+                <input type="checkbox" asp-for="donut.Chopped_Peanuts" />Chopped Peanuts
+            </div>
+            <div>
+                <input type="checkbox" asp-for="donut.Shredded_Coconut" />Shredded Coconut
+            </div>
+            <div>
+                <input type="checkbox" asp-for="donut.Oreo_Cookie" />Oreo Cookie
+            </div>
+            <div>
+                <input type="checkbox" asp-for="donut.Rainbow_Sprinkle" />Rainbow Sprinkle
+            </div>
+
+
+        </div>
+        <div><h2>Choose a Drizzle</h2></div>
+        <div>
+
+            <div>
+                <input type="checkbox" asp-for="donut.Marshmallow" />Marshmallow
+            </div>
+            <div>
+                <input type="checkbox" asp-for="donut.Salted_Caramel" />Salted Caramel
+            </div>
+            <div>
+                <input type="checkbox" asp-for="donut.Raspberry" />Raspberry
+            </div>
+            <br />
+            <div>
+                <button type="submit" class="btn btn-primary">Order My Pizza</button>
+            </div>
+
+        </div>
+    </form>  
+    
+
+</div>

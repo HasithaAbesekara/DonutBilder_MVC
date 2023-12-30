@@ -1,0 +1,52 @@
+﻿@page
+@model PrivacyModel
+@{
+    ViewData["Title"] = "Dounut Builder";
+}
+<div >
+    <div class="text-center">
+        <h1 class="display-3" style="font-size:50px">Our Delightful Donuts!</h1>
+        <p style="font-weight:bold">
+            Try your Dream Donut Builder! Then Order and Done!<br />
+            No Personal Details Required!
+        </p>
+        <br /><br />
+    </div>
+    <div className="row">
+        <div style="display:flex;">
+            <div >
+                <br />
+                <img src="~/images/DonutMaker.gif" style="width:300px;height:300px" />
+            </div>
+            <div >
+                <br />
+                <h4>The Dream Donut Maker</h4>
+                <p>Make Your Own Donut with Donut Maker!</p>
+                <a class="btn btn-primary" asp-area="" asp-page="/CustomDonut">Try Now!</a>
+            </div>
+        </div>
+    </div>
+    <div class="text-center">
+        <h4>Our Fans Dream Donuts</h4>
+        <div class="text-center">
+            <div class="row">
+                @foreach (var item in Model.DonutModels)
+                {
+                    var imgPath = "./images/" + item.ImageName + ".png";
+                    <div class="col-4">
+                        <form asp-route-PizzaName="@item.DonutName" >
+                            <button style="border:none;background-color:transparent">
+                                <img src=@imgPath class="w-100 mt-3" style="border-radius:30px" /><br />
+                                <h4 class="m-1">@item.DonutName</h4>
+                            </button>
+                        </form>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

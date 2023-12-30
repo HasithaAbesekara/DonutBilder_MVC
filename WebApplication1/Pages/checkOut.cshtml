@@ -1,0 +1,28 @@
+﻿@page
+@model WebApplication1.Pages.checkOutModel
+@{
+    ViewData["Title"] = "Check Out !";
+}
+
+@if (Model.finalPrice == null)
+{
+    <div >
+        <h1>The Order has been placed !</h1>
+        <img src="~/images/DonutBox.png" style="width:300px;height:300px;"/>
+    </div>
+    
+
+}
+else
+{
+    <div >
+        <h1>The Order has been placed !</h1>
+        <h1>Your @Model.DonutName Donut is ready</h1>
+        <img src="~/images/DonutBox.png" style="width:300px;height:300px;"/>
+    </div>
+    <div >
+        <h4>Total Price for your donut: $ @Model.finalPrice</h4>
+        <a class="btn btn-secondary" asp-area="" asp-page="/ThankYou">Confirm Order</a>
+    </div>
+}
+
